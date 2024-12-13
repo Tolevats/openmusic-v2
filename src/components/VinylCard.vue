@@ -1,7 +1,7 @@
 <template>
   <div class="vinyl-card">
-    <img :src="vinyl.image" :alt="vinyl.album" />
     <h3>{{ vinyl.artist }}</h3>
+    <img :src="vinyl.image" :alt="vinyl.album" />
     <p>{{ vinyl.album }}</p>
   </div>
 </template>
