@@ -1,21 +1,15 @@
 <template>
-  <div class="home">
-    <h1>Vinyl Catalog</h1>
+  <main class="home">
+    <h1 class="home-title">Find Your Sound</h1>
+    <p class="home-description">
+      Explore our vast collection of vinyl records, spanning decades and genres.<br>
+      <br>
+      From classic rock anthems to the latest indie hits, we have something for every music lover.<br>
+      <br>
+      Browse our curated categories below to discover your next favorite album!
+    </p>
     <CategoryList />
-  </div>
-  <!--   <div>
-    <header>
-      <h1>OpenMusic</h1>
-    </header>
-    <main>
-      <h2>Categorías</h2>
-      <div>
-        <router-link to="/category/Pop">Pop</router-link>
-        <router-link to="/category/Rap">Rap</router-link>
-        <router-link to="/category/Rock">Rock</router-link>
-      </div>
-    </main>
-  </div> -->
+  </main>
 </template>
 
 <script>
@@ -30,19 +24,30 @@ export default {
 </script>
 
 <style scoped>
-/* header {
-  text-align: center;
-  background-color: #f4f4f4;
-  padding: 20px;
-}
-
 main {
-  padding: 20px;
+  height: 100vh;
+}
+.home-title {
+  font-size: 2.5rem; /* Slightly larger for impact */
+  font-weight: 700; /* Bold for emphasis */
+  color: #333;
+  margin: 2.5rem 0 1.5rem;
+  text-align: center; /* Ensure centered text */
+}
+.home-description {
+  font-size: 1.1rem; /* Slightly smaller for better readability */
+  color: #666; /* Slightly lighter color for contrast */
+  margin: 2.5rem 2rem 1.5rem;
+  text-align: left;
 }
 
-router-link {
-  margin-right: 10px;
-  text-decoration: none;
-  color: blue;
-} */
+@media (min-width: 768px) {
+  .home-title {
+    font-size: 3.5rem;
+  }
+  .home-description {
+    font-size: 1.9rem;
+    padding: 0 3em;
+  }
+}
 </style>
