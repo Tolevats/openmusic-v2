@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-<!--     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav> -->
     <Header />
     <router-view/>
     <Footer />
@@ -23,4 +19,10 @@ export default {
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
 </style>
