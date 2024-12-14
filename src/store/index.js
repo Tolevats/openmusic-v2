@@ -43,5 +43,16 @@ export default new Vuex.Store({
       ],
     }
   },
-
+  mutations: {
+    addVinyl(state, vinyl) {
+      state.vinyls.push(vinyl);
+    }
+  },
+  getters: {
+    vinylsByCategory(state) {
+      return (category) => {
+        return state.vinyls.filter(vinyl => vinyl.category === category);
+      };
+    }
+  }
 });
