@@ -1,44 +1,32 @@
 <template>
     <header>
-        <!-- <img src="@assets/logo/logo-white-transparent.svg" alt="openMusic Logo" class="logo" /> -->
-        <h1>openMusic</h1>
+        <img src="@/assets/logo/logo-white-transparent.svg" alt="openMusic Logo" class="logo" />
     </header>
 </template>
 
 <script>
 export default {
     name: 'header-component',
-/*     data() {
-        return {
-            logo: require('@assets/logo/logo-white-transparent.svg'),
-        };
-    } */
 };
 </script>
 
 <style scoped>
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(45deg, #1e90ff, #ff6347);
-    color: white;
-    padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: linear-gradient(45deg, #1e90ff, #ff6347);
+  max-height: 100px; /* Limit the header size */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 .logo {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
+  max-width: 100px;
+  height: auto;
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
+@media (min-width: 768px) {
   .logo {
-    margin-bottom: 10px;
+    max-width: 200px;
   }
 }
 </style>
