@@ -15,7 +15,7 @@ footer {
   background-color: #1f1f1f;
   color: white;
   text-align: center;
-  padding: 1em 0;
-  margin-top: 2em;
+  padding: 1.5em 0;
+  font-size: 0.9rem;
 }
 </style>
