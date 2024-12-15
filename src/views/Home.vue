@@ -2,10 +2,9 @@
   <main class="home">
     <h1 class="home-title">Find Your Sound</h1>
     <p class="home-description">
-      Explore our vast collection of vinyl records, spanning decades and genres.<br>
-      <br>
-      From classic rock anthems to the latest indie hits, we have something for every music lover.<br>
-      <br>
+      From classic rock anthems to the latest indie hits, we have something for every music lover.
+    </p>
+    <p class="home-description">
       Browse our curated categories below to discover your next favorite album!
     </p>
     <CategoryList />
@@ -24,21 +23,18 @@ export default {
 </script>
 
 <style scoped>
-main {
-  height: 100vh;
-}
 .home-title {
-  font-size: 2.5rem; /* Slightly larger for impact */
-  font-weight: 700; /* Bold for emphasis */
+  font-size: 2.5rem;
+  font-weight: 700; /* bold for emphasis */
   color: #333;
   margin: 2.5rem 0 1.5rem;
-  text-align: center; /* Ensure centered text */
+  text-align: center; /* ensure centered text */
 }
 .home-description {
-  font-size: 1.1rem; /* Slightly smaller for better readability */
-  color: #666; /* Slightly lighter color for contrast */
-  margin: 2.5rem 2rem 1.5rem;
-  text-align: left;
+  font-size: 1rem; /* slightly smaller for better readability */
+  color: #666; /* slightly lighter color for contrast */
+  margin: 0 2rem 0.5rem;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -46,7 +42,8 @@ main {
     font-size: 3.5rem;
   }
   .home-description {
-    font-size: 1.9rem;
+    font-size: 1.3rem;
+    text-align: center;
     padding: 0 3em;
   }
 }
