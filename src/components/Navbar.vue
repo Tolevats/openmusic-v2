@@ -15,6 +15,7 @@ nav {
   position: sticky; /* stick the nav to the top of the screen */
   top: 0; /* ensure it sticks to the top */
   width: 100%;
+  background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* subtle shadow */
   z-index: 1; /* ensure nav is on top of other content */
   padding: 1em 6em;
