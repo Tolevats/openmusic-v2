@@ -40,15 +40,20 @@ export default {
   },
   methods: {
     handleAddAlbum(album) {
-      this.$store.dispatch("addAlbum", album);
+      //to get the category from the album object
+      const category = album.genre;
+      
+      //checking if the category exists in the state
+      if (!this.$store.state.categories[category]) {
+        //if not, create a new array for the category
+        this.$store.state.categories[category] = []; //to be tested
+      }
+      
+      //push the new album to the category array
+      this.$store.state.categories[category].push(album);
+
       this.$router.push(`/category/${album.genre}`);
     },
-/*     addVinyl() {
-      this.$store.dispatch('addVinyl', this.newVinyl);
-      this.$router.push(`/category/${this.newVinyl.genre}`);
-      //reset the form
-      this.newVinyl = { artist: '', album: '', image: '', genre: '' };
-    }, */
   },
   components: {
     AddAlbumForm,
@@ -60,7 +65,6 @@ export default {
 .categories {
   margin: 2em;
 }
-
 .categories-title {
   font-size: 1.8rem;
   color: #333;
@@ -69,22 +73,21 @@ export default {
 }
 .category-grid {
   display: flex;
-  flex-wrap: wrap; /* Allow buttons to wrap to the next line */
-  justify-content: center; /* Center the grid horizontally */
+  flex-wrap: wrap; /* allow buttons to wrap to the next line */
+  justify-content: center; /* center the grid horizontally */
 }
 .category-btn {
   margin: 10px;
-  flex: 0 0 calc(33.33% - 20px); /* Calculate width for 3 columns with margins */
-  max-width: calc(33.33% - 20px); /* Limit width to prevent overflow */
+  flex: 0 0 calc(33.33% - 20px); /* calculate width for 3 columns with margins */
+  max-width: calc(33.33% - 20px); /* limit width to prevent overflow */
 }
-
 .category-btn .link {
   display: block;
   width: 100%;
   height: 50px;
   text-align: center;
   line-height: 50px;
-  background: linear-gradient(45deg, #1e90ff, #ff6347);
+  background: linear-gradient(-45deg, #1e90ff, #ff6347);
   color: white;
   font-size: 1rem;
   font-weight: bold;
@@ -93,43 +96,11 @@ export default {
   text-decoration: none;
   transition: transform 0.2s ease, background-color 0.3s ease;
 }
-
 .category-btn .link:hover {
   background: linear-gradient(45deg, #092f54, #66261b);
   transform: scale(1.1); /* subtle hover effect */
 }
 
-/* Add Album Form */
-/* .add-album {
-  margin-top: 2em;
-  text-align: center;
-}
-
-.add-album form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-.add-album input, .add-album select, .add-album button {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.add-album button {
-  background-color: #1e90ff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.add-album button:hover {
-  background-color: #0056b3;
-} */
 @media (min-width: 768px) {
   .categories-title {
     font-size: 2.5rem;
