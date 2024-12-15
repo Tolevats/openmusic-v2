@@ -102,7 +102,7 @@ button.submit-btn {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    background-color: #1e90ff;
+    background-color: #e33f22;
     color: white;
     border: none;
     border-radius: 5px;
@@ -111,7 +111,7 @@ button.submit-btn {
     transition: background-color 0.3s ease;
 }
 button.submit-btn:hover {
-    background-color: #0056b3;
+    background-color: #66261b;
 }
 
 /* Responsive Styles */
@@ -119,7 +119,7 @@ button.submit-btn:hover {
     .add-album form {
         flex-wrap: wrap;
         display: grid;
-        grid-template-columns: repeat(4, 1fr)/* (4, 3fr) */;
+        grid-template-columns: repeat(4, 1fr);
         gap: 20px;
     }
     .form-group {
