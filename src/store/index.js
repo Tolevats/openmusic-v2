@@ -49,10 +49,13 @@ export default new Vuex.Store({
     }
   },
   getters: {
+    totalVinyls(state) {
+      return Object.values(state.categories).flat().length;
+    },
     vinylsByCategory(state) {
-      return (category) => {
-        return state.vinyls.filter(vinyl => vinyl.category === category);
-      };
+      return Object.fromEntries(
+        Object.entries(state.categories).map(([key, value]) => [key, value.length])
+      );
     }
   }
 });
